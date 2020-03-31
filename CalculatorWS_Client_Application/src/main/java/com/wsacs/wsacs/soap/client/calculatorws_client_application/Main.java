@@ -28,6 +28,8 @@ public class Main {
             System.out.println("DIV: " +port.div(x, y));
         } catch(Exception e){
             // handle exception
+            System.out.println("Failed to call service");
+            System.out.println(e);
         }
 
     }
