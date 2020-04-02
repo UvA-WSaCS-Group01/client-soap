@@ -12,63 +12,63 @@
 
 <xs:element name="helloResponse" type="tns:helloResponse"/>
 
-<xs:element name="min" type="tns:min"/>
-
-<xs:element name="minResponse" type="tns:minResponse"/>
-
 <xs:element name="mul" type="tns:mul"/>
 
 <xs:element name="mulResponse" type="tns:mulResponse"/>
 
+<xs:element name="sub" type="tns:sub"/>
+
+<xs:element name="subResponse" type="tns:subResponse"/>
+
 <xs:complexType name="mul">
 <xs:sequence>
-<xs:element name="x" type="xs:int"/>
-<xs:element name="y" type="xs:int"/>
+<xs:element name="x" type="xs:double"/>
+<xs:element name="y" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="mulResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:int"/>
+<xs:element name="return" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="min">
+<xs:complexType name="sub">
 <xs:sequence>
-<xs:element name="x" type="xs:int"/>
-<xs:element name="y" type="xs:int"/>
+<xs:element name="x" type="xs:double"/>
+<xs:element name="y" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="minResponse">
+<xs:complexType name="subResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:int"/>
+<xs:element name="return" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="add">
 <xs:sequence>
-<xs:element name="x" type="xs:int"/>
-<xs:element name="y" type="xs:int"/>
+<xs:element name="x" type="xs:double"/>
+<xs:element name="y" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="addResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:int"/>
+<xs:element name="return" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="div">
 <xs:sequence>
-<xs:element name="x" type="xs:int"/>
-<xs:element name="y" type="xs:int"/>
+<xs:element name="x" type="xs:double"/>
+<xs:element name="y" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="divResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:int"/>
+<xs:element name="return" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 
