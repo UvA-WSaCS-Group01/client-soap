@@ -10,11 +10,11 @@
 <message name="addResponse">
 <part name="parameters" element="tns:addResponse"/>
 </message>
-<message name="mul">
-<part name="parameters" element="tns:mul"/>
+<message name="div">
+<part name="parameters" element="tns:div"/>
 </message>
-<message name="mulResponse">
-<part name="parameters" element="tns:mulResponse"/>
+<message name="divResponse">
+<part name="parameters" element="tns:divResponse"/>
 </message>
 <message name="sub">
 <part name="parameters" element="tns:sub"/>
@@ -22,38 +22,28 @@
 <message name="subResponse">
 <part name="parameters" element="tns:subResponse"/>
 </message>
-<message name="div">
-<part name="parameters" element="tns:div"/>
+<message name="mul">
+<part name="parameters" element="tns:mul"/>
 </message>
-<message name="divResponse">
-<part name="parameters" element="tns:divResponse"/>
-</message>
-<message name="hello">
-<part name="parameters" element="tns:hello"/>
-</message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse"/>
+<message name="mulResponse">
+<part name="parameters" element="tns:mulResponse"/>
 </message>
 <portType name="CalculatorService">
 <operation name="add">
 <input wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/addRequest" message="tns:add"/>
 <output wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/addResponse" message="tns:addResponse"/>
 </operation>
-<operation name="mul">
-<input wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/mulRequest" message="tns:mul"/>
-<output wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/mulResponse" message="tns:mulResponse"/>
+<operation name="div">
+<input wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/divRequest" message="tns:div"/>
+<output wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/divResponse" message="tns:divResponse"/>
 </operation>
 <operation name="sub">
 <input wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/subRequest" message="tns:sub"/>
 <output wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/subResponse" message="tns:subResponse"/>
 </operation>
-<operation name="div">
-<input wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/divRequest" message="tns:div"/>
-<output wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/divResponse" message="tns:divResponse"/>
-</operation>
-<operation name="hello">
-<input wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/helloRequest" message="tns:hello"/>
-<output wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/helloResponse" message="tns:helloResponse"/>
+<operation name="mul">
+<input wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/mulRequest" message="tns:mul"/>
+<output wsam:Action="http://calculator.web.soap.wsacs.wsacs.com/CalculatorService/mulResponse" message="tns:mulResponse"/>
 </operation>
 </portType>
 <binding name="CalculatorServicePortBinding" type="tns:CalculatorService">
@@ -67,7 +57,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="mul">
+<operation name="div">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -85,16 +75,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="div">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="hello">
+<operation name="mul">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
